@@ -50,6 +50,15 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ /redirector.php [L]
 ```
 
+OR
+
+```
+# Redirect error requests to redirector.php
+ErrorDocument 404 /redirector.php
+ErrorDocument 403 /redirector.php
+ErrorDocument 410 /redirector.php
+```
+
 ## Environment Variables
 
 This plugin uses PHP's built-in `getenv()` function to retrieve environment variables. Ensure your environment variables are properly set in your server configuration or `.env` file.
@@ -63,6 +72,9 @@ DB_HOST=localhost
 DB_USERNAME=root
 DB_PASSWORD=yourpassword
 DB_DATABASE=wordpress
+
+# Your website WordPress root folder
+BASE_PATH=/homepage/
 ```
 
 ### Server Configuration
