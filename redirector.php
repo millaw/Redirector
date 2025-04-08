@@ -4,8 +4,8 @@ include 'db_config.php'; // Include the database configuration file
 $path = filter_var(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), FILTER_SANITIZE_URL);
 $slug = basename($path, ".php");
 
-// Retrieve the base path from an environment variable or default to '/homepage/'
-$base_path = getenv('BASE_PATH') ?: '/homepage/';
+// Retrieve the base path from an environment variable or default to '/wordpress/'
+$base_path = getenv('BASE_PATH') ?: '/wordpress/';
 
 // Handle non-PHP URLs gracefully
 if (pathinfo($path, PATHINFO_EXTENSION) !== 'php' && strpos($path, $base_path) !== 0) {
