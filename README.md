@@ -74,7 +74,7 @@ DB_PASSWORD=yourpassword
 DB_DATABASE=wordpress
 
 # Your website WordPress root folder
-BASE_PATH=/homepage/
+BASE_PATH=/wordpress/
 ```
 
 ### Server Configuration
